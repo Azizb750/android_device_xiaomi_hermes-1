@@ -1,0 +1,22 @@
+/boot          emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/boot
+/system        ext4  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/system
+/system_image  emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/system
+/cache         ext4  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/cache
+/recovery      emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/recovery   flags=backup=1
+/data          ext4  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/userdata   flags=encryptable=footer
+/expdb         emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/expdb      flags=display="Expdb";backup=1
+/flashinfo     emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/flashinfo  flags=display="FlashInfo";backup=1
+/lk            emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/lk         flags=display="Uboot";backup=1
+/logo          emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/logo       flags=display="Logo";backup=1;flashimg=1
+/nvram         emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/nvram      flags=display="Nvram";backup=1
+/para          emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/para       flags=display="Para";backup=1
+/proinfo       emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/proinfo    flags=display="Proinfo";backup=1
+/seccfg        emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/seccfg     flags=display="Seccfg";backup=1
+/secro         emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/secro      flags=display="Secro";backup=1
+/tee1          emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/tee1       flags=display="Tee";backup=1
+/tee2          emmc  /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/tee2       flags=backup=1;subpartitionof=/tee1
+/pgpt          emmc  /dev/block/mmcblk0boot0                                          flags=display="Preloader";backup=1                     
+
+/usb-otg       auto  /dev/block/sda1       /dev/block/sda      flags=storage;wipeingui;removable
+/external_sd   auto  /dev/block/mmcblk1p1  /dev/block/mmcblk1
+
