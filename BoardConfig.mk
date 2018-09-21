@@ -50,6 +50,7 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/twrp.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
+BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_DEVICE_VERSION := Dinolek
