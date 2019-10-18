@@ -1,14 +1,14 @@
-# OpenStone L861 - Lineage-15.1 branch (oreo)
+# Xiaomi Redmi Note 2 - Lineage-15.1 branch (oreo)
 
 ==============
 
-This branch is device tree for building Lineage-15.1 branch (oreo) Rom for OpenStone L861.
+This branch is device tree for building Lineage-15.1 branch (oreo) Rom for Xiaomi Redmi Note 2.
 
 ---
 
 ## Build Information
 
-### Working
+### Working (NOT TESTED YET)
 
 * Boots
 * Ril

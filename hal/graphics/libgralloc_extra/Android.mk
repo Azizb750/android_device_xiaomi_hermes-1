@@ -29,7 +29,7 @@ LOCAL_C_INCLUDES += \
 	$(TOP)/frameworks/native/libs/nativewindow/include \
 	$(TOP)/frameworks/native/libs/nativebase/include \
 	$(TOP)/frameworks/native/libs/arect/include \
-#	$(TOP)/kernel/openstone/L861/drivers/staging/android/uapi
+#	$(TOP)/kernel/xiaomi/hermes/drivers/staging/android/uapi
 
 LOCAL_MODULE := libgralloc_extra
 LOCAL_MODULE_TAGS := optional

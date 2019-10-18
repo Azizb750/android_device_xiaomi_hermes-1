@@ -52,7 +52,7 @@ cc_library_static {
     //-----------------------------------------------------------
     include_dirs: [
     "frameworks/av/camera/include",
-    "device/openstone/L861/hal/libcamera_client_mtk/include",
+    "device/xiaomi/hermes/hal/libcamera_client_mtk/include",
     "frameworks/av/include",
     ],
     //

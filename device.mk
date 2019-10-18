@@ -5,13 +5,13 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-dalv
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
 # Vendor
-$(call inherit-product, vendor/openstone/L861/L861-vendor-blobs.mk)
+$(call inherit-product, vendor/xiaomi/hermes/L861-vendor-blobs.mk)
 
 # Telecom
 PRODUCT_PACKAGES += Telecom
 
 # Folder path
-DEVICE_PATH := device/openstone/L861
+DEVICE_PATH := device/xiaomi/hermes
 
 -include $(DEVICE_PATH)/hidl.mk
 
@@ -29,7 +29,7 @@ PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := L861
+TARGET_OTA_ASSERT_DEVICE := hermes
 
 
 #hw composer
@@ -275,22 +275,11 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_COPY_FILES += \
-	$(DEVICE_PATH)/ramdisk/enableswap.sh:root/enableswap.sh \
-	$(DEVICE_PATH)/ramdisk/factory_init.project.rc:root/factory_init.project.rc \
-	$(DEVICE_PATH)/ramdisk/factory_init.rc:root/factory_init.rc \
-	$(DEVICE_PATH)/ramdisk/fstab.mt6795:root/fstab.mt6795 \
-	$(DEVICE_PATH)/ramdisk/init.modem.rc:root/init.modem.rc \
-	$(DEVICE_PATH)/ramdisk/init.mt6795.rc:root/init.mt6795.rc \
-	$(DEVICE_PATH)/ramdisk/init.mt6795.usb.rc:root/init.mt6795.usb.rc \
-	$(DEVICE_PATH)/ramdisk/init.project.rc:root/init.project.rc \
-	$(DEVICE_PATH)/ramdisk/ueventd.mt6795.rc:root/ueventd.mt6795.rc \
-	$(DEVICE_PATH)/ramdisk/init.volte.rc:root/init.volte.rc \
-	$(DEVICE_PATH)/ramdisk/init.mal.rc:root/init.mal.rc \
-	$(DEVICE_PATH)/ramdisk/init.trustonic.rc:root/init.trustonic.rc \
-	$(DEVICE_PATH)/ramdisk/meta_init.modem.rc:root/meta_init.modem.rc \
-	$(DEVICE_PATH)/ramdisk/meta_init.project.rc:root/meta_init.project.rc \
-	$(DEVICE_PATH)/ramdisk/meta_init.rc:root/meta_init.rc \
-	$(DEVICE_PATH)/ramdisk/fstab.charger:root/fstab.charger \
+    $(LOCAL_PATH)/ramdisk/fstab.mt6795:root/fstab.mt6795 \
+    $(LOCAL_PATH)/ramdisk/init.mt6795.rc:root/init.mt6795.rc \
+    $(LOCAL_PATH)/ramdisk/init.mt6795.usb.rc:root/init.mt6795.usb.rc \
+    $(LOCAL_PATH)/ramdisk/ueventd.mt6795.rc:root/ueventd.mt6795.rc \
+    $(LOCAL_PATH)/ramdisk/variant_check.sh:root/variant_check.sh
 
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -432,33 +421,7 @@ PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)/configs/hostapd/hostapd.accept:system/vendor/etc/hostapd/hostapd.accept \
 	$(DEVICE_PATH)/configs/hostapd/hostapd.deny:system/vendor/etc/hostapd/hostapd.deny
 
-
-# NFC
-PRODUCT_PACKAGES += \
-	com.android.nfc_extras \
-	nfc_nci.mt6605.default \
-	libmtknfc \
-	Nfc \
-	Tag
-
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/configs/nfc/nfcstackp:system/bin/nfcstackp
-
-PRODUCT_COPY_FILES += \
-	$(DEVICE_PATH)/configs/nfc/MTKNfclicense.lic:system/etc/MTKNfclicense.lic \
-	frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
-	frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-	frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-	$(DEVICE_PATH)/configs/permissions/com.gsma.services.nfc.xml:system/etc/permissions/com.gsma.services.nfc.xml \
-	$(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:system/etc/permissions/privapp-permissions-mediatek.xml
-
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/configs/nfc/nfc.cfg:system/vendor/etc/nfc.cfg
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/configs/nfc/nfcse.cfg:system/vendor/etc/nfcse.cfg
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/configs/nfc/nfcee_access.xml:system/vendor/etc/nfcee_access.xml
-
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/configs/nfc/nfc.cfg:system/etc/nfc.cfg
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/configs/nfc/nfcse.cfg:system/etc/nfcse.cfg
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/configs/nfc/nfcee_access.xml:system/etc/nfcee_access.xml
-
+PRODUCT_COPY_FILES += $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:system/etc/permissions/privapp-permissions-mediatek.xml
 
 # MTK Helpers
 PRODUCT_PACKAGES += \

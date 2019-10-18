@@ -1,4 +1,4 @@
-DEVICE_PATH := device/openstone/L861
+DEVICE_PATH := device/xiaomi/hermes
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -11,18 +11,18 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := L861
+PRODUCT_RELEASE_NAME := hermes
 
 # Device display
-TARGET_SCREEN_HEIGHT := 2560
-TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_L861
-PRODUCT_DEVICE := L861
-PRODUCT_BRAND := openstone
-PRODUCT_MODEL := L861
-PRODUCT_MANUFACTURER := openstone
+PRODUCT_NAME := lineage_hermes
+PRODUCT_DEVICE := hermes
+PRODUCT_BRAND := xiaomi
+PRODUCT_MODEL := Redmi Note 2
+PRODUCT_MANUFACTURER := xiaomi
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # SDcard
@@ -33,8 +33,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-leeco
 
 # Build fingerprint from Indian variant.
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=L861 \
-    PRODUCT_NAME=lineage_L861 \
+    TARGET_DEVICE=hermes \
+    PRODUCT_NAME=lineage_hermes \
 	PRIVATE_BUILD_DESC="full_x500-user 6.0 DHXOSOP5801911241S 1479990092 release-keys"
 
 BUILD_FINGERPRINT := Letv/Le1s_IN/X3_HK:6.0/DHXOSOP5801911241S/1479990092:user/release-keys
